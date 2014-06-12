@@ -7,13 +7,37 @@
 //
 
 #import "AppDelegate.h"
+#import "Reachability.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+//    self.reachability = [Reachability reachabilityForInternetConnection];
+//    self.reachability = [Reachability reachabilityForLocalWiFi];
+    [self.reachability startNotifier];
+    if ([self.reachability currentReachabilityStatus] == NotReachable) {
+        self.reache = NO;
+        NSLog(@"net down");
+    } else {
+        NSLog(@"net on");
+        self.reache = YES;
+    }
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+
     return YES;
+}
+
+- (void)reachabilityChanged:(NSNotification *)note
+{
+    NetworkStatus status = [self.reachability currentReachabilityStatus];
+    if (status == NotReachable) {
+        NSLog(@"net down");
+    } else {
+        NSLog(@"net on");
+    }
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
