@@ -22,6 +22,8 @@
 		F766546019493FFB00C7158B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F766543F19493FFB00C7158B /* UIKit.framework */; };
 		F766546819493FFB00C7158B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F766546619493FFB00C7158B /* InfoPlist.strings */; };
 		F766546A19493FFB00C7158B /* NetWorkReachableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F766546919493FFB00C7158B /* NetWorkReachableTests.m */; };
+		F76654791949410B00C7158B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F76654761949410B00C7158B /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F766547A1949410B00C7158B /* ReachabilityAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F76654781949410B00C7158B /* ReachabilityAppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		F766546519493FFB00C7158B /* NetWorkReachableTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NetWorkReachableTests-Info.plist"; sourceTree = "<group>"; };
 		F766546719493FFB00C7158B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F766546919493FFB00C7158B /* NetWorkReachableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkReachableTests.m; sourceTree = "<group>"; };
+		F76654751949410B00C7158B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		F76654761949410B00C7158B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		F76654771949410B00C7158B /* ReachabilityAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReachabilityAppDelegate.h; sourceTree = "<group>"; };
+		F76654781949410B00C7158B /* ReachabilityAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReachabilityAppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 		F766542F19493FFB00C7158B = {
 			isa = PBXGroup;
 			children = (
+				F76654741949410B00C7158B /* Reachability */,
 				F766544119493FFB00C7158B /* NetWorkReachable */,
 				F766546319493FFB00C7158B /* NetWorkReachableTests */,
 				F766543A19493FFB00C7158B /* Frameworks */,
@@ -153,6 +160,17 @@
 				F766546619493FFB00C7158B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F76654741949410B00C7158B /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				F76654751949410B00C7158B /* Reachability.h */,
+				F76654761949410B00C7158B /* Reachability.m */,
+				F76654771949410B00C7158B /* ReachabilityAppDelegate.h */,
+				F76654781949410B00C7158B /* ReachabilityAppDelegate.m */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +273,8 @@
 			files = (
 				F766545519493FFB00C7158B /* ViewController.m in Sources */,
 				F766544C19493FFB00C7158B /* AppDelegate.m in Sources */,
+				F76654791949410B00C7158B /* Reachability.m in Sources */,
+				F766547A1949410B00C7158B /* ReachabilityAppDelegate.m in Sources */,
 				F766544819493FFB00C7158B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
